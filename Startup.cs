@@ -39,6 +39,12 @@ namespace BooksApi
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "BooksApi", Version = "v1" });
             });
+
+            services.Configure<ToolDatabase>(
+            Configuration.GetSection(nameof(ToolDatabase)));
+            services.AddSingleton<IToolDatabaseSettings>(sp =>
+            sp.GetRequiredService<IOptions<ToolDatabase>>().Value);
+            services.AddSingleton<ToolService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/krishanpatel/Documents/C#/source/repos/DataAccess/BooksApi/BooksApi.csproj": {}
+    "/Users/krishanpatel/Documents/C#/source/repos/DataAccess/BooksApi.csproj": {}
   },
   "projects": {
-    "/Users/krishanpatel/Documents/C#/source/repos/DataAccess/BooksApi/BooksApi.csproj": {
+    "/Users/krishanpatel/Documents/C#/source/repos/DataAccess/BooksApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/krishanpatel/Documents/C#/source/repos/DataAccess/BooksApi/BooksApi.csproj",
+        "projectUniqueName": "/Users/krishanpatel/Documents/C#/source/repos/DataAccess/BooksApi.csproj",
         "projectName": "BooksApi",
-        "projectPath": "/Users/krishanpatel/Documents/C#/source/repos/DataAccess/BooksApi/BooksApi.csproj",
+        "projectPath": "/Users/krishanpatel/Documents/C#/source/repos/DataAccess/BooksApi.csproj",
         "packagesPath": "/Users/krishanpatel/.nuget/packages/",
-        "outputPath": "/Users/krishanpatel/Documents/C#/source/repos/DataAccess/BooksApi/obj/",
+        "outputPath": "/Users/krishanpatel/Documents/C#/source/repos/DataAccess/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/krishanpatel/.nuget/NuGet/NuGet.Config"

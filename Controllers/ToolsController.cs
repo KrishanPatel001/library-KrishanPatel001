@@ -9,21 +9,21 @@ namespace BooksApi.Controllers
     [ApiController]
     public class ToolsController : ControllerBase
     {
-        private readonly BookService _bookService;
+        private readonly ToolService _toolService;
 
-        public ToolsController(BookService bookService)
+        public ToolsController(ToolService toolService)
         {
-            _bookService = bookService;
+            _toolService = toolService;
         }
 
         [HttpGet]
         public ActionResult<List<Tool>> Get() =>
-            _toolsService.Get();
+            _toolService.Get();
 
         [HttpGet("{id:length(24)}", Name = "GetTool")]
-        public ActionResult<Book> Get(string id)
+        public ActionResult<Tool> Get(string id)
         {
-            var tool = _bookService.Get(id);
+            var tool = _toolService.Get(id);
 
             if (tool == null)
             {
@@ -34,24 +34,24 @@ namespace BooksApi.Controllers
         }
 
         [HttpPost]
-        public ActionResult<Book> Create(Book book)
+        public ActionResult<Tool> Create(Tool tool)
         {
-            _bookService.Create(book);
+            _toolService.Create(tool);
 
-            return CreatedAtRoute("GetBook", new { id = book.Id.ToString() }, book);
+            return CreatedAtRoute("GetTool", new { id = tool.Id.ToString() }, tool);
         }
 
         [HttpPut("{id:length(24)}")]
-        public IActionResult Update(string id, Book bookIn)
+        public IActionResult Update(string id, Tool toolIn)
         {
-            var book = _bookService.Get(id);
+            var tool = _toolService.Get(id);
 
-            if (book == null)
+            if (tool == null)
             {
                 return NotFound();
             }
 
-            _bookService.Update(id, bookIn);
+            _toolService.Update(id, toolIn);
 
             return NoContent();
         }
@@ -59,16 +59,17 @@ namespace BooksApi.Controllers
         [HttpDelete("{id:length(24)}")]
         public IActionResult Delete(string id)
         {
-            var book = _bookService.Get(id);
+            var tool = _toolService.Get(id);
 
-            if (book == null)
+            if (tool == null)
             {
                 return NotFound();
             }
 
-            _bookService.Remove(id);
+            _toolService.Remove(id);
 
             return NoContent();
         }
     }
+
 }
